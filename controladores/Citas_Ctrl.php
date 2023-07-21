@@ -54,7 +54,7 @@ class Citas_Ctrl
         
         $cadenaSql= $cadenaSql . " SELECT CI.id_cita, CI.fecha, CI.estado, CI.id_disponibilidad, ";
         $cadenaSql= $cadenaSql . " USU.nombres AS NombreDoc, USU.apellidos AS ApellidoDoc, USU.imagen AS ImagenDoc,USU2.nombres AS NombreUsu, USU2.apellidos ApellidoUsu, USU2.imagen AS ImagenUsu,date_format(TUR.hora_inicio,'%H:%i') as hora_inicio,  date_format(TUR.hora_final,'%H:%i') as hora_final, ARE.nombre AS Area";        
-        $cadenaSql= $cadenaSql . " FROM `cita` CI ";
+        $cadenaSql= $cadenaSql . " FROM cita CI ";
         $cadenaSql= $cadenaSql . " INNER JOIN doctor DOC on CI.id_doctor = DOC.id_doctor ";
         $cadenaSql= $cadenaSql . " INNER JOIN area ARE on DOC.id_area = ARE.id_area ";
         $cadenaSql= $cadenaSql . " INNER JOIN usuario USU on DOC.id_usuario = USU.id_usuario ";
